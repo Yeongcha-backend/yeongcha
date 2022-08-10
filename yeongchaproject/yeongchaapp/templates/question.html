@@ -1,0 +1,51 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/question.css' %}">           
+{% endblock %}
+{% block content %}
+    <h1>초보 이사러의 궁금증</h1>
+    <div class="sub-container">
+        <p class="green">이사 고민 &nbsp;</p>
+        <p class="black">바로 해결 &nbsp;</p>
+        <p class="green">초보 이사러 &nbsp;</p>
+        <p class="black">모두 모여라!</p>
+        <button class="relevant">최신순</button>
+    </div>
+    <div class="search-box">
+        <input type="text" class="search">
+        <input type="image" class="search-btn" value="submit" src="{% static 'img/search.png' %}">
+    </div>
+    <a href="{% url 'questioncreate' %}">
+    <button  class="write">글쓰기</button></a>
+    {% for post in posts %}
+    <a href="{% url 'questiondetail' post.id %}">
+    <div class="wrapper">
+        <p class="title">{{ post.title }}</p>
+        <p class="date">{{ post.date }}</p>
+        <p class="count">조회 {{ post.counting }}</p>
+        <!-- <img src="../img/heart.png" class="heart"><b class="views">20</b>
+        <img src="../img/balloon.png" class="balloon"><b class="views">14</b>
+        <img src="../img/bookmark.png" class="bookmark"><b class="views">6</b> --> 
+    </div>
+    </a>
+    {% endfor %}
+    <img src="{% static 'img/left.png' %}" class="left">
+    <img src="{% static 'img/gcircle.png' %}" class="gcircle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/right.png' %}" class="right">
+    <script src="{% static 'js/like.js' %}"></script>
+
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
+
+
+{% endblock %}

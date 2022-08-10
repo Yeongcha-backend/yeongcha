@@ -1,0 +1,57 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/question_content1.css' %}">           
+{% endblock %}
+{% block content %}
+
+    <h1>초보 이사러의 궁금증</h1>
+    <div class="sub-container">
+        <p class="green">이사 고민 &nbsp;</p>
+        <p class="black">바로 해결 &nbsp;</p>
+        <p class="green">초보 이사러 &nbsp;</p>
+        <p class="black">모두 모여라!</p>
+    </div>
+    <div class="search-box">
+        
+    </div>
+    <h2>{{ question_detail.title }}</h2>
+    <p class="sub-info">{{ question_detail.date }}</p>
+    <p class="sub-info">조회 {{ question_detail.counting }}</p>
+    <p class="text">{{ question_detail.body }}</p>
+    <!-- <img src="../img/heart.png" class="heart"><b class="views">20</b>
+    <img src="../img/balloon.png" class="balloon"><b class="views">14</b>
+    <img src="../img/bookmark.png" class="bookmark"><b class="views">6</b> -->
+    <div class="bottom">
+        <button class="comment-title1">댓글</button>
+        <button class="comment-title2">최신순</button>
+    </div>
+    <form method="POST" action="{%  url 'questioncreate_comment' question_detail.id %}">
+        {% csrf_token %}
+        {{ commnet_form }}
+        <!-- <input class="input" type="text" placeholder="댓글을 입력해주세요"> -->
+        <button class="itemAdd" type="submit">등록</button>
+    </form>
+    <section>
+       
+        <ul class="items">
+            {% for questioncomment in question_detail.questioncomment_set.all %}
+            <!-- <p>{{ questioncomment }}</p> -->
+            <li class="item">
+            <p>{{ questioncomment }}</p>
+            </li>  
+            {% endfor %}
+        </ul>
+    </section>
+
+
+    <!-- <script src="{% static 'js/comment.js' %}"></script> --> 
+    <!-- 댓글 삭제인듯 -->
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
+
+{% endblock %}

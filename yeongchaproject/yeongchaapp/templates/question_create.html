@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/write.css' %}">           
+{% endblock %}
+{% block content %}
+
+
+    <h1>초보 이사러의 궁금증</h1>
+    <div class="sub-container">
+        <p class="green">이사 고민 &nbsp;</p>
+        <p class="black">바로 해결 &nbsp;</p>
+        <p class="green">초보 이사러 &nbsp;</p>
+        <p class="black">모두 모여라!</p>
+    </div>
+    <div class="search-box">
+        
+    </div>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="submit" value="등록" class="submit">
+
+        <div class="wrapper">
+            <label for="title" class="title">글 제목</label>
+            {{ form.title }}
+            <!-- <input type="text" class="input"><br> -->
+            <br>
+        </div>
+        <!-- <div class="wrapper">
+            <label for="title" class="title">해쉬태그</label>
+            <input type="text" class="input-hash"><br>
+        </div>
+        <ui id="tag-list"></ui> -->
+        <div class="wrapper">
+            <label for="title" class="text">내용</label>
+            <!-- <textarea type="text" class="input2" placeholder="이곳에 글을 작성해주세요. 최소 10글자 이상 입력해주세요."></textarea> -->
+            {{ form.body }}
+        </div> 
+    </form>
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
+{% endblock %}
+

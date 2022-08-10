@@ -1,0 +1,31 @@
+<h1>나눔 장터</h1>
+<h1>물품명</h1>
+{{ share_detail.title }}
+
+
+<h3>본문에 추가된 첨부파일</h3>
+{% if share_detail.photo %}
+    <!-- 사진 찍어주기 -->
+    {{ share_detail.photo.url }}
+    <img src="{{ share_detail.photo.url }}" alt="" height="600">
+{% endif %}
+
+<h2>수량</h2>
+{{ share_detail.count }}
+<h2>날짜</h2>
+{{ share_detail.date }}
+<h3>본문</h3>
+{{ share_detail.body }}
+
+<h3>댓글</h3>
+<form method="POST" action="{%  url 'sharecreate_comment' share_detail.id %}">
+    {% csrf_token %}
+    {{ commnet_form }}
+    <input type="submit">
+</form>
+
+<!-- 댓글 목록 -->
+{% for sharecomment in share_detail.sharecomment_set.all %}
+<p>{{ sharecomment }}</p>
+<hr>
+{% endfor %}

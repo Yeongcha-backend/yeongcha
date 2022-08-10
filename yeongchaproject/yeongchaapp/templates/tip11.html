@@ -1,0 +1,13 @@
+
+</br>
+<h1>고수의 꿀팁</h1>
+
+{% for post in posts %}
+    <a href="{% url 'tipdetail' post.id %}"><h3>제목: {{ post.title }}</h3></a>
+    <h4>작성 날짜: {{ post.date }}</h4>
+  
+{% endfor %}
+<br/><br/></br/>
+
+
+<a href="{% url 'tipcreate' %}">django model form을 이용한 새 글 작성</a>

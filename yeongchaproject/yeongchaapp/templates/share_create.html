@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/divide_write.css' %}">    
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>       
+{% endblock %}
+{% block content %}
+
+    <h1>나눔 장터</h1>
+    <div class="sub-container">
+        <p class="green">쓸모</p>
+        <p class="black">없는 &nbsp;</p>
+        <p class="black">물건도 &nbsp;</p>
+        <p class="black">나누면 &nbsp;</p>
+        <p class="green">쓸모</p>
+        <p class="black">있다!!</p>
+    </div>
+    <div class="search-box">
+
+    </div>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="submit" value="등록" class="submit">
+        <div class="wrapper">
+            <label for="title" class="title">물품명</label>
+            {{ form.title }}
+            <br>
+            <!-- <input type="text" class="input"><br> -->
+        </div>
+        <div class="wrapper">
+            <label for="title" class="title">개수</label>
+            <div class="choose">
+                <!-- <button class="gak">각</button>
+                <button class="gak">총</button> -->
+                {{ form.count }}
+                <br>
+                <!-- <input type="text" class="input3"><br> -->
+            </div>
+            <p class="sub-choose">물품의 종류가 여러개 일 때는 ‘각 4개’이나 ‘총 7개’와 같이 적어주세요.</p>
+        </div>
+        <div class="wrapper">
+         
+            <label for="title" class="title">지역명</label>
+            <!-- {{ form.region }} -->
+            <!-- <input type="text" class="text-box"><br> -->
+            <input type="hidden" name="select_extra" value="1">
+            <select name="sido1" id="sido1"></select>
+            <select name="gugun1" id="gugun1"></select>
+        </div>
+        <div class="wrapper">
+            <label for="upload01" class="file-label">이미지 추가</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ form.photo }}
+           <!-- <input type="file" name="" id="upload01" class="file-upload" /> -->
+        </div>
+        <div class="wrapper">
+            <label for="title" class="text">코멘트</label>
+            {{ form.body }}
+            <!-- <textarea type="text" class="input2" placeholder="물품 설명이나 요청사항이 필요하다면 적어주세요"></textarea> -->
+        </div> 
+    </form>
+        <footer class="footer">
+
+        </footer>
+    <script src="{% static 'js/chooseNum.js' %}"></script>
+    <script src="{% static 'js/sidogun.js' %}"></script>
+</body>
+</html>
+
+
+{% endblock %}

@@ -15,7 +15,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from yeongchaapp import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #초보 이사러 관련 url 
+    path('question/', views.question, name='question'),
+    path('questioncreate/', views.questioncreate, name='questioncreate'),
+    path('questiondetail/<int:question_id>', views.questiondetail, name='questiondetail'),
+    path('questioncreate_comment/<int:question_id>', views.questioncreate_comment, name='questioncreate_comment'),
+    #고수들의 꿀팁 관련 url 
+    path('tip/', views.tip, name='tip'),
+    path('tipcreate/', views.tipcreate, name='tipcreate'),
+    path('tipdetail/<int:tip_id>', views.tipdetail, name='tipdetail'),
+    #초보 이사러 관련 url 
+    path('share/', views.share, name='share'),
+    path('sharecreate/', views.sharecreate, name='sharecreate'),
+    path('sharedetail/<int:share_id>', views.sharedetail, name='sharedetail'),
+    path('sharecreate_comment/<int:share_id>', views.sharecreate_comment, name='sharecreate_comment'),
+
 ]
+ #media 파일 접급할 수 있는 url 추가
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

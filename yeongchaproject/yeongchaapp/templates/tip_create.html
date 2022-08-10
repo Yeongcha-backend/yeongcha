@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/tipwrite.css' %}">           
+{% endblock %}
+{% block content %}
+
+    <h1>고수의 꿀팁</h1>
+    <div class="sub-container">
+        <p class="black">내 주변에 &nbsp;</p>
+        <p class="green">고수 &nbsp;</p>
+        <p class="black">들이 이렇게나 많아?</p>
+    </div>
+    <div class="search-box">
+        
+    </div>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="submit" value="등록" class="submit">
+       
+        <div class="wrapper">
+            <label for="title" class="title">글 제목</label>
+            {{ form.title }}
+            <!-- <input type="text" class="input"> -->
+            <br>
+        </div>
+        <!-- <div class="wrapper">
+            <label for="title" class="title">해쉬태그</label>
+            <input type="text" class="input-hash"><br>
+        </div>
+        <ui id="tag-list"></ui> -->
+        <div class="wrapper">
+            <label for="title" class="text">내용</label>
+            {{ form.body }}
+            <!-- <textarea type="text" class="input2" placeholder="이곳에 글을 작성해주세요. 최소 10글자 이상 입력해주세요.">{{ form.body }}</textarea> -->
+        </div> 
+    </form>
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
+
+{% endblock %}

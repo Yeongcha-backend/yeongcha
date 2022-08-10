@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.logo{
+    width: 55px;
+    height: 31px;
+    margin-top: 35px;
+    margin-left: 320px;
+}
+
+.login-box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    margin-left: 426px;
+    margin-top: 150px;
+}
+
+.input{
+    margin-left: 46px;
+    background-color:#F5F5F5;
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+    width: 450px;
+    height: 54px;
+    font-size: 20px;
+}
+
+#text-id{
+    font-size: 20px;
+    color: rgba(77, 118, 123, 1);
+    margin-left: -55px;
+    font-weight: 600;
+    position: relative;
+    top: 35px;
+}
+
+#text-pwd{
+    font-size: 20px;
+    color: rgba(77, 118, 123, 1);
+    margin-left: -65px;
+    margin-top: -250px;
+    font-weight: 600;
+    position: relative;
+    top: 40px;
+}
+
+.submit{
+    background-color: rgba(146, 181, 180, 1);
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    width: 150px;
+    height: 140px; 
+    border: none;
+    border-radius: 5px;
+    margin-left: 1000px;
+    margin-top: 217px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(102, 102, 102, 1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration-color: rgb(212, 212, 212);
+}
+
+.bottom{
+    margin-left: 500px;
+    margin-top: 25px;
+    text-decoration-line: underline;
+    text-underline-position: under;
+}
+
+footer{
+    width: 100%;
+    height: 47px; 
+    position: absolute;  
+    bottom: 0;
+    left: 2px;
+    background-color: #C9DAD9;
+}

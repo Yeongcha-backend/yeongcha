@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/tip_content1.css' %}">           
+{% endblock %}
+{% block content %}
+
+    <h1>초보 이사러의 궁금증</h1>
+    <div class="sub-container">
+        <p class="green">이사 고민 &nbsp;</p>
+        <p class="black">바로 해결 &nbsp;</p>
+        <p class="green">초보 이사러 &nbsp;</p>
+        <p class="black">모두 모여라!</p>
+    </div>
+    <div class="search-box">
+        
+    </div>
+    <h2>{{ tip_detail.title }}</h2>
+    <p class="sub-info">{{ tip_detail.date }}</p>
+    <p class="sub-info">조회 {{ tip_detail.counting }}</p>
+    <p class="text">{{ tip_detail.body }}</p>
+    <!-- <img src="../img/heart.png" class="heart"><b class="views">20</b>
+    <img src="../img/balloon.png" class="balloon"><b class="views">14</b>
+    <img src="../img/bookmark.png" class="bookmark"><b class="views">6</b> -->
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
+
+{% endblock %}

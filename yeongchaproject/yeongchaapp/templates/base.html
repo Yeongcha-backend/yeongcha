@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoungCha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    {% block head %}
+                
+    {% endblock %}
+
+</head>
+<body>
+    <header>
+        <nav class>
+            <a href="./login_pre.html">
+                <img src="{% static 'img/logo.png' %}" class="logo">
+            </a>
+            <a href="login_pre.html" class="side1">로그아웃</a>
+            <a href="mypage.html" class="side2">마이페이지</a>
+            <ul class="nav-container">
+                <li class="nav-item"><a href="">이사 견적 내기</a></li>
+                <li class="nav-item"><a href="{% url 'share' %}">나눔 장터</a></li>
+                <li class="nav-item"><a href="{% url 'tip' %}">고수의 꿀팁</a></li>
+                <li class="nav-item"><a href="{% url 'question' %}">초보 이사러의 궁금증</a></li>
+                <li class="nav-item2"><a href="">우리 동네 이야기</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}
+                
+    {% endblock %}

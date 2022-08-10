@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/divide.css' %}">           
+{% endblock %}
+{% block content %}
+
+    <h1>나눔 장터</h1>
+    <div class="sub-container">
+        <p class="green">쓸모</p>
+        <p class="black">없는 &nbsp;</p>
+        <p class="black">물건도 &nbsp;</p>
+        <p class="black">나누면 &nbsp;</p>
+        <p class="green">쓸모</p>
+        <p class="black">있다!!</p>
+        <button class="relevant">최신순</button>
+    </div>
+    <div class="search-box">
+        <input type="text" class="search">
+        <input type="image" class="search-btn" value="submit" src="{% static 'img/search.png' %}">
+    </div>
+    <a href="{% url 'sharecreate' %}">
+    <button  class="write">나눔 등록하기</button></a>
+
+    <div class="box">
+    {% for post in posts %}
+    <a href="{% url 'sharedetail' post.id %}">
+    <div class="wrapper" onclick="window.location.href='divide_content1.html'">
+        <img src="{{ post.photo.url }}" class="deal">
+        <p class="first">{{ post.title }}</p>
+        <p class="second">{{ post.count }}</p>
+        <!-- <img src="../img/heart.png" class="heart"><b class="views">2</b>
+        <img src="../img/balloon.png" class="balloon"><b class="views">4</b>
+        <img src="../img/bookmark.png" class="bookmark"><b class="views">1</b> -->
+    </div></a>
+    {% endfor %}
+ 
+    </div>
+    <!-- <div class="box">
+        <div class="wrapper">
+            <img src="../img/deal5.png" class="deal">
+            <p class="first">청소기(코드 선 없음)</p>
+            <p class="second">1개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">6</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">6</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">3</b>
+        </div>
+        <div class="wrapper">
+            <img src="../img/deal6.png" class="deal">
+            <p class="first">두루마리 휴지</p>
+            <p class="second">4개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">11</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">30</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">9</b>
+        </div>
+        <div class="wrapper">
+            <img src="../img/deal7.png" class="deal">
+            <p class="first">소폰지</p>
+            <p class="second">2개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">3</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">2</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">0</b>
+        </div>
+        <div class="wrapper">
+            <img src="../img/deal8.png" class="deal">
+            <p class="first">공병 2개, 고무장갑, 스폰..</p>
+            <p class="second">총 6개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">11</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">4</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">3</b>
+        </div>
+    </div>
+    <div class="box">
+        <div class="wrapper">
+            <img src="../img/deal9.png" class="deal">
+            <p class="first">고무장갑</p>
+            <p class="second">1개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">7</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">9</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">8</b>
+        </div>
+        <div class="wrapper">
+            <img src="../img/deal10.png" class="deal">
+            <p class="first">손걸레</p>
+            <p class="second">5개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">11</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">30</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">25</b>
+        </div>
+        <div class="wrapper">
+            <img src="../img/deal11.png" class="deal">
+            <p class="first">공병</p>
+            <p class="second">2개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">1</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">1</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">0</b>
+        </div>
+        <div class="wrapper">
+            <img src="../img/deal12.png" class="deal">
+            <p class="first">먼지 털이</p>
+            <p class="second">1개</p>
+            <img src="../img/heart.png" class="heart"><b class="views">0</b>
+            <img src="../img/balloon.png" class="balloon"><b class="views">2</b>
+            <img src="../img/bookmark.png" class="bookmark"><b class="views">0</b>
+        </div>
+    </div> -->
+    <img src="{% static 'img/left.png' %}" class="left">
+    <img src="{% static 'img/gcircle.png' %}" class="gcircle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/circle.png' %}" class="circle">
+    <img src="{% static 'img/right.png' %}" class="right">
+    <script src="{% static 'js/like.js' %}"></script>
+
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
+
+{% endblock %}
