@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/static/css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <title>YoungCha</title>
 </head>
+
 <body>
     <header>
         <nav class>
-            <a href="./login_pre.html">
-                <img src="../img/logo.png" class="logo">
+            <a href="{% url 'home' %}">
+                <img src="/static/img/logo.png" class="logo">
             </a>
         </nav>
     </header>
@@ -23,9 +24,11 @@
         <label for="text-pwd" id="text-pwd">비밀번호</label>
         <input type="password" class="input"><br>
     </form>
-    <button type="submit" class="submit">로그인</button>
+    <a href="{% url 'login_after' %}">
+        <button type="submit" class="submit">로그인</button>
+    </a>
     <div class="bottom">
-        <a href="./signup.html">아직 영차 회원이 아니라면?</a>
+        <a href="{% url 'signup' %}">아직 영차 회원이 아니라면?</a>
     </div>
     <footer class="footer">
 

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/login_after.css">
+    <link rel="stylesheet" href="/static/css/login_after.css">
     <title>YoungCha</title>
 </head>
-<body>
+<body><!--마이페이지에 로그아웃도 들어가야할듯 -->
     <div class="v64_308">
         <div class="v64_734"></div>
         <div class="v64_309"></div>
@@ -25,16 +25,16 @@
             <div class="v64_318">
                 <div class="v64_319"></div>
                 <div class="v64_320">
-                    <span class="v64_321">나눔 장터</span>
+                    <a href="{% url 'share' %}"><span class="v64_321">나눔 장터</span></a>
                 </div>
             </div>
             <div class="v64_322">
                 <div class="v64_323"></div>
-                <span class="v64_324">고수의 꿀팁</span>
+                <a href="{% url 'tip' %}"><span class="v64_324">고수의 꿀팁</span></a>
             </div>
             <div class="v64_325">
                 <div class="v64_326"></div>
-                <span class="v64_327">초보 이사러의 궁금증</span>
+                <a href="{% url 'question' %}"><span class="v64_327">초보 이사러의 궁금증</span></a>
             </div>
             <div class="v64_328">
                 <div class="v64_329"></div>
@@ -56,14 +56,14 @@
         <span class="v64_641">이사 초보도 쉽게 영차와 함께하는 소형 이사</span>
         <div class="v64_652">
             <div class="v64_516"></div>
-            <span class="v64_645">나눔장터</span>
+            <a href="{% url 'share' %}"><span class="v64_645">나눔장터</span></a>
         </div>
         <div class="v64_653">
             <div class="v64_513"></div>
-            <span class="v64_646">초보 이사러의 궁금증</span>
+            <a href="{% url 'question' %}"><span class="v64_646">초보 이사러의 궁금증</span></a>
         </div><div class="v64_654">
             <div class="v64_518"></div>
-            <span class="v64_647">고수의 꿀팁</span>
+            <a href="{% url 'tip' %}"><span class="v64_647">고수의 꿀팁</span></a>
         </div>
         <div class="v64_655">
             <div class="v64_517"></div>
@@ -72,7 +72,7 @@
         <div class="v64_565"></div>
         <div class="v64_72"></div>
         <div class="v64_730">
-            <img scr="html\로고 인간.png">
+            <img src="/static/img/logoman.png"> 
         </div>
         <div class="v64_735"></div>
         <div class="v64_738"></div>

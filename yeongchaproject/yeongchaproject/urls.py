@@ -21,6 +21,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.home, name='home'), #로그인 전 홈화면 
+
+    path('login/',views.login,name='login'),
+    path('main_home/',views.login_after,name='login_after'), #로그인 후 홈화면  
+    path('signup/',views.signup,name='signup'),
     #초보 이사러 관련 url 
     path('question/', views.question, name='question'),
     path('questioncreate/', views.questioncreate, name='questioncreate'),

@@ -522,7 +522,7 @@ body {
 .v64_565 {
     width: 218px;
     height: 273px;
-    background: url("/img/로고 인간.png");
+    background: url("/static/img/logoman.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
