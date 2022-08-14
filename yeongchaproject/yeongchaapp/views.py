@@ -41,12 +41,11 @@ def signup(request):
             user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'])
             # 로그인 한다
             auth.login(request, user)
-            return render(request, 'test.html')
+            return render(request, 'login_success.html')
     return render(request,'signup.html')
 
 def login_after(request):
     return render(request,'login_after.html')
-    
 # 초보 이사러의 궁금증
 def question(request):
     #posts = Blog.objects.all()

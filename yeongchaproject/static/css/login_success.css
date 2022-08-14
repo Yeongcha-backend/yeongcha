@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.hello{
+    font-size: 14px;
+    margin-left: 600px;
+    margin-top: 204px;
+}
+
+.gcircle{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-left: 950px;
+    margin-top: -40px;
+}
+
+
+.black1{
+    color: black;
+    margin-left: 560px;
+    margin-top: 30px;
+}
+
+.black2{
+    margin-top: 30px;
+}
+
+.green{
+    color: #4D767B;
+    margin-top: 30px;
+}
+
+.btn{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #92B5B4;
+    border: none;
+    border-radius: 15px;
+    width: 320px;
+    height: 115px;
+    margin-left: 570px;
+    margin-top: 90px;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: 47px; 
+    position: absolute;  
+    bottom: 0;
+    left: 2px;
+    background-color: #C9DAD9;
+}
