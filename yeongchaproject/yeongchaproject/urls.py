@@ -26,6 +26,9 @@ urlpatterns = [
     path('login/',views.login,name='login'),
     path('main_home/',views.login_after,name='login_after'), #로그인 후 홈화면  
     path('signup/',views.signup,name='signup'),
+    path('worker/', views.worker,name='worker'),
+    path('worker_review/', views.worker_review,name='worker_review'),
+    path('mypagereview',views.mypagereview,name='mypagereview'),
     #초보 이사러 관련 url 
     path('question/', views.question, name='question'),
     path('questioncreate/', views.questioncreate, name='questioncreate'),

@@ -46,6 +46,16 @@ def signup(request):
 
 def login_after(request):
     return render(request,'login_after.html')
+
+def worker(request):
+    return render(request,'worker.html')
+
+def worker_review(request):
+    return render(request,'worker_review.html')
+
+def mypagereview(request):
+    return render(request,'mypage_review.html')
+    
 # 초보 이사러의 궁금증
 def question(request):
     #posts = Blog.objects.all()
