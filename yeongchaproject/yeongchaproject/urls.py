@@ -1,18 +1,3 @@
-"""yeongchaproject URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
 from yeongchaapp import views
@@ -21,7 +6,26 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home, name='home'), #로그인 전 홈화면 
+    path('', views.home, name='home'),
+
+    path('movingday/', views.movingday, name='movingday'),
+    path('tip/', views.tip, name='tip'),
+    path('divide/',views.divide, name='divide'),
+    path('question/', views.question, name='question'),
+    path('movquote_strt/', views.movingquote_start, name='movingquote_start'),
+    path('movquote_des/', views.movingquote_des, name='movingquote_des'),
+    path('living/', views.living, name="living"),
+    path('lib/',views.lib, name="lib"),
+    path('digital/',views.digital, name="digital"),
+    path('div/', views.divide, name="share"),
+    path('det/', views.detail, name='detail'),
+    path('kit/', views.kit, name='kit'),
+    path('etc/', views.etc, name='etc'),
+    path('mypg_mov/', views.mypg_mov, name="mypage_mov"),
+    path('mypg_post/',views.mypg_post, name='mypg_post'),
+    path('check_day/', views.check_day, name='check_day'),
+    path('check_dday/', views.check_Dday, name='check_dday'),
+    path('check_week', views.check_week, name='check_week'),
 
     path('login/',views.login,name='login'),
     path('main_home/',views.login_after,name='login_after'), #로그인 후 홈화면  
@@ -43,7 +47,5 @@ urlpatterns = [
     path('sharecreate/', views.sharecreate, name='sharecreate'),
     path('sharedetail/<int:share_id>', views.sharedetail, name='sharedetail'),
     path('sharecreate_comment/<int:share_id>', views.sharecreate_comment, name='sharecreate_comment'),
-
-]
- #media 파일 접급할 수 있는 url 추가
+] #media 파일 접급할 수 있는 url 추가
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,40 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/checklist_day.css">
+    <link rel="stylesheet" href="{%static 'css/checklist_day.css' %}">
     <title>YoungCha</title>
 </head>
 <body>
     <div class="v64_1263">
         <div class="v64_1264"></div>
         <div class="v64_1265"></div>
-        <span class="v64_1267">마이페이지</span>
-        <div class="v64_1268">
-            <div class="v64_1269">
-                <div class="v64_1270"></div>
-                <div class="v64_1271">
-                    <span class="v64_1272">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v64_1273">
-                <div class="v64_1274"></div>
-                <div class="v64_1275">
-                    <span class="v64_1276">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v64_1277">
-                <div class="v64_1278"></div>
-                <span class="v64_1279">고수의 꿀팁</span>
-            </div>
-            <div class="v64_1280">
-                <div class="v64_1281"></div>
-                <span class="v64_1282">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v64_1283">
-                <div class="v64_1284"></div>
-                <span class="v64_1285">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {%block content%}
         <span class="v64_1286">손쉬운 이사 견적</span>
         <div class="v64_1287"></div>
         <div class="v64_1288"></div>
@@ -71,7 +49,8 @@
             <div class="v64_1327">
                 <div class="v64_1328">
                     <div class="v64_1329"></div>
-                </div></div><span class="v64_1330">항목 추가</span>
+                </div></div><span class="v64_1330"><a href="{% url '항목 추가'%}"</span>
+                
             </div>
             <!-- <div class="name"></div> -->
             <span class="v64_1146">가구 배치도 작성</span>
@@ -82,3 +61,4 @@
         </div>
 </body>
 </html>
+{%endblock%}

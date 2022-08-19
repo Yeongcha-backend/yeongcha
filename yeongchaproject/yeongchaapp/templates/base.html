@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YoungCha</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
-    {% block head %}
-                
+    
+    {% block head %}  
     {% endblock %}
 
 </head>
@@ -26,7 +26,7 @@
             
             <a href="mypage.html" class="side2">마이페이지</a>
             <ul class="nav-container">
-                <li class="nav-item"><a href="">이사 견적 내기</a></li>
+                <li class="nav-item"><a href="{% url 'movingday' %}">이사 견적 내기</a></li>
                 <li class="nav-item"><a href="{% url 'share' %}">나눔 장터</a></li>
                 <li class="nav-item"><a href="{% url 'tip' %}">고수의 꿀팁</a></li>
                 <li class="nav-item"><a href="{% url 'question' %}">초보 이사러의 궁금증</a></li>

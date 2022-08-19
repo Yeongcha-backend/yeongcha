@@ -1,3 +1,6 @@
+{%extends 'head.html'%}
+{%load static %}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/mypage_moving.css">
+    <link rel="stylesheet" href="{%static 'css/mypage_moving.css'%}">
     <title>YoungCha</title>
 </head>
 <body>
@@ -14,40 +17,15 @@
         <div class="v121_548"></div>
         <div class="v121_549"></div>
         <div class="v121_550"></div>
-        <span class="v121_552">마이페이지</span>
-        <div class="v121_553">
-            <div class="v121_554">
-                <div class="v121_555"></div>
-                <div class="v121_556">
-                    <span class="v121_557">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v121_558">
-                <div class="v121_559"></div>
-                <div class="v121_560">
-                    <span class="v121_561">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v121_562">
-                <div class="v121_563"></div>
-                <span class="v121_564">고수의 꿀팁</span>
-            </div>
-            <div class="v121_565">
-                <div class="v121_566"></div>
-                <span class="v121_567">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v121_568">
-                <div class="v121_569"></div>
-                <span class="v121_570">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {%block content%}
         <div class="v121_571"></div>
         <div class="v121_572">
             <span class="v121_573">마이페이지</span>
         </div>
-        <span class="v121_574">나의 이사</span>
-        <span class="v121_575">게시글</span>
-        <span class="v121_576">체크리스트</span>
+        <span class="v121_574"><a href="{% url 'mypage_mov'%}">나의 이사</a></span>
+        <span class="v121_575"><a href="{% url 'mypg_post'%}">게시글</a></span>
+        <span class="v121_576"><a href="{% url 'check_day'%}">체크리스트</a></span>
         <!-- <div class="name"></div> -->
         <div class="v121_578"></div>
         <div class="v121_579"></div>
@@ -100,3 +78,4 @@
     </div>
 </body>
 </html>
+{%endblock%}

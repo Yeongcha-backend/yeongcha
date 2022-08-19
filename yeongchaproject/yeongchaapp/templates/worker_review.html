@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/css/worker_review.css">
+    <link rel="stylesheet" href="{% static 'css/worker_review.css' %}">
     <title>YoungCha</title>
 </head>
 <body>
     <div class="v121_304">
         <div class="v121_305"></div>
         <div class="v121_306"></div>
+        {%endblock%}
+        {%block content%}
         <span class="v121_308">마이페이지</span>
         <div class="v121_309">
             <div class="v121_310">
@@ -95,3 +100,4 @@
     </div>
 </body>
 </html>
+{%endblock%}

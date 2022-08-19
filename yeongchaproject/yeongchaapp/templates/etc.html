@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/etc.css">
+    <link rel="stylesheet" href="{% static 'css/etc.css' %}">
     <title>YoungCha</title>
 </head>
 <body>
@@ -13,33 +16,8 @@
         <div class="v100_1104"></div>
         <div class="v100_1105"></div>
         <div class="v100_1106"></div>
-        <span class="v100_1108">마이페이지</span>
-        <div class="v100_1109">
-            <div class="v100_1110">
-                <div class="v100_1111"></div>
-                <div class="v100_1112">
-                    <span class="v100_1113">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v100_1114">
-                <div class="v100_1115"></div>
-                <div class="v100_1116">
-                    <span class="v100_1117">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v100_1118">
-                <div class="v100_1119"></div>
-                <span class="v100_1120">고수의 꿀팁</span>
-            </div>
-            <div class="v100_1121">
-                <div class="v100_1122"></div>
-                <span class="v100_1123">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v100_1124">
-                <div class="v100_1125"></div>
-                <span class="v100_1126">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {% block content%}
         <div class="v100_1127"></div>
         <div class="v100_1128">
             <span class="v100_1129">짐정보 입력</span>
@@ -56,7 +34,7 @@
                     <div class="v100_1138"></div>
                 </div>
             </div>
-            <span class="v100_1139">다음</span>
+            <span class="v100_1139"><a href="{% url 'mypage_mov' %}">다음</a></span>
         </div>
         <!-- <div class="name"></div> -->
         <div class="v100_1141"></div>
@@ -86,3 +64,4 @@
     </div>
 </body>
 </html>
+{%endblock%}

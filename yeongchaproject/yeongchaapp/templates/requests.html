@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/requests.css">
+    <link rel="stylesheet" href="{% static 'css/requests.css'%}">
     <title>YoungCha</title>
 </head>
 <body>
@@ -13,33 +16,8 @@
         <div class="v102_1695"></div>
         <div class="v102_1696"></div>
         <div class="v102_1697"></div>
-        <span class="v102_1699">마이페이지</span>
-        <div class="v102_1700">
-            <div class="v102_1701">
-                <div class="v102_1702"></div>
-                <div class="v102_1703">
-                    <span class="v102_1704">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v102_1705">
-                <div class="v102_1706"></div>
-                <div class="v102_1707">
-                    <span class="v102_1708">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v102_1709">
-                <div class="v102_1710"></div>
-                <span class="v102_1711">고수의 꿀팁</span>
-            </div>
-            <div class="v102_1712">
-                <div class="v102_1713"></div>
-                <span class="v102_1714">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v102_1715">
-                <div class="v102_1716"></div>
-                <span class="v102_1717">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {%block content%}
         <div class="v102_1718"></div>
         <div class="v102_1719">
             <span class="v102_1720">요청 사항</span>
@@ -83,3 +61,4 @@
     </div>
 </body>
 </html>
+{%endblock%}

@@ -145,3 +145,59 @@ def sharecreate_comment(request, share_id):
             finished_form.post = get_object_or_404(Share, pk=share_id)
             finished_form.save()
         return redirect('sharedetail',share_id)
+#상단바 url
+def home(request):
+    return render(request, 'login_pre.html')
+
+def movingday(request):
+    return render(request, 'movingDay.html')
+
+def tip(request):
+    return render(request, 'tip.html')
+
+def question(request):
+    return render(request, 'question.html')
+
+def divide(request):
+    return render(request, 'divide.html')
+
+def movingquote_start(request):
+    return render(request, 'movingQuote_start.html')
+
+#견적 파트 url 
+def movingquote_des(request):
+    return render(request, 'movingQuote_des.html')
+
+def living(request):
+    return render(request, 'bed_living.html')
+
+def lib(request):
+    return render(request, 'lib.html')
+
+def digital(request):
+    return render(request, 'digital.html')
+
+def kit(request):
+    return render(request, 'kitchen.html')
+
+def detail(request):
+    return render(request, 'detail.html')
+
+def mypg_mov(request):
+    return render(request, 'mypage_moving.html')
+
+def mypg_post(request):
+    return render(request, 'mypage_post.html')
+
+def check_day(request):
+    return render(request, 'checklist_day.html')
+
+def check_Dday(request):
+    return render(request, 'checklist_Dday.html')
+
+def check_week(request):
+    return render(request, 'checklist_week.html')
+    
+def etc(request):
+    return render(request, 'etc.html')
+    

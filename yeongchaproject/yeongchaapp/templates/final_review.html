@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/final_review.css">
+    <link rel="stylesheet" href="{% static 'css/final_review.css' %}">
     <title>YoungCha</title>
 </head>
 <body>
@@ -13,33 +16,8 @@
         <div class="v101_1164"></div>
         <div class="v101_1165"></div>
         <div class="v101_1166"></div>
-        <span class="v101_1168">마이페이지</span>
-        <div class="v101_1169">
-            <div class="v101_1170">
-                <div class="v101_1171"></div>
-                <div class="v101_1172">
-                    <span class="v101_1173">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v101_1174">
-                <div class="v101_1175"></div>
-                <div class="v101_1176">
-                    <span class="v101_1177">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v101_1178">
-                <div class="v101_1179"></div>
-                <span class="v101_1180">고수의 꿀팁</span>
-            </div>
-            <div class="v101_1181">
-                <div class="v101_1182"></div>
-                <span class="v101_1183">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v101_1184">
-                <div class="v101_1185"></div>
-                <span class="v101_1186">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {%block content%}
         <div class="v101_1187"></div>
         <div class="v101_1188">
             <span class="v101_1189">최종 리뷰</span>
@@ -127,3 +105,4 @@
     </div>
 </body>
 </html>
+{%endblock%}

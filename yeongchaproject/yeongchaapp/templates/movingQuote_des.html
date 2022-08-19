@@ -1,3 +1,6 @@
+{%extends 'head.html'%}
+{%load static%}
+{% block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/movingQuote_des.css">
+    <link rel="stylesheet" href="{% static 'css/movingQuote_des.css'%}">
     <title>YoungCha</title>
 </head>
 <body>
@@ -14,33 +17,8 @@
             <div class="v100_85"></div>
             <div class="v100_86"></div>
             <div class="v100_87"></div>
-            <span class="v100_89">마이페이지</span>
-            <div class="v100_90">
-                <div class="v100_91">
-                    <div class="v100_92"></div>
-                    <div class="v100_93">
-                        <span class="v100_94">이사 견적 내기</span>
-                    </div>
-                </div>
-                <div class="v100_95">
-                    <div class="v100_96"></div>
-                    <div class="v100_97">
-                        <span class="v100_98">나눔 장터</span>
-                    </div>
-                </div>
-                <div class="v100_99">
-                    <div class="v100_100"></div>
-                    <span class="v100_101">고수의 꿀팁</span>
-                </div>
-                <div class="v100_102">
-                    <div class="v100_103"></div>
-                    <span class="v100_104">초보 이사러의 궁금증</span>
-                </div>
-                <div class="v100_105">
-                    <div class="v100_106"></div>
-                    <span class="v100_107">우리 동네 이야기</span>
-                </div>
-            </div>
+            {%endblock%}
+            {% block content %}
             <div class="v100_108"></div>
             <div class="v100_109">
                 <span class="v100_110">도착지 정보</span>
@@ -83,7 +61,7 @@
                         <div class="v100_137"></div>
                     </div>
                 </div>
-                <span class="v100_138">다음</span>
+                <span class="v100_138"><a href="{% url 'living' %}">다음</a></span>
             </div>
             <div class="v100_139"></div>
             <div class="v100_140"></div>
@@ -131,5 +109,7 @@
             <div class="v100_180"></div>
             <span class="v102_1617">최종 리뷰</span>
         </div>
+    </body>
 </body>
 </html>
+{% endblock %}

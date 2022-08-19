@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head> <!--영차 이미지 없음! -->
@@ -11,6 +12,7 @@
 </head>
 <body>
     <body>
+        <!--head-->
         <div class="v203_42">
             <div class="v203_43"></div>
             <div class="v203_44"></div>
@@ -22,22 +24,26 @@
                 <div class="v203_49">
                     <div class="v203_50"></div>
                     <div class="v203_51">
-                        <span class="v203_52">이사 견적 내기</span>
+                        <a href="{% url 'movingday' %}">
+                        <span class="v203_52">이사 견적 내기</span></a>
                     </div>
                 </div>
                 <div class="v203_53">
                     <div class="v203_54"></div>
                     <div class="v203_55">
-                        <span class="v203_56">나눔 장터</span>
+                        <a href="{% url 'share' %}">
+                        <span class="v203_56">나눔 장터</span></a>
                     </div>
                 </div>
                 <div class="v203_57">
                     <div class="v203_58"></div>
-                    <span class="v203_59">고수의 꿀팁</span>
+                    <a href="{% url 'tip' %}">
+                    <span class="v203_59">고수의 꿀팁</span></a>
                 </div>
                 <div class="v203_60">
                     <div class="v203_61"></div>
-                    <span class="v203_62">초보 이사러의 궁금증</span>
+                    <a href="{% url 'question' %}">
+                    <span class="v203_62">초보 이사러의 궁금증</span></a>
                 </div>
                 <div class="v203_63">
                     <div class="v203_64"></div>

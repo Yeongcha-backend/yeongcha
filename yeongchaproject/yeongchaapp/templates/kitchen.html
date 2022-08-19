@@ -1,3 +1,6 @@
+{% extends 'head.html' %}
+{%load static%}
+{% block head %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,41 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/kitchen.css">
-    <title>YoungCha</title>
+    <link rel="stylesheet" href="{% static 'css/kitchen.css' %}">
 </head>
 <body>
     <div class="v100_1037">
         <div class="v100_1038"></div>
         <div class="v100_1039"></div>
         <div class="v100_1040"></div>
-        <span class="v100_1042">마이페이지</span>
-        <div class="v100_1043">
-            <div class="v100_1044">
-                <div class="v100_1045"></div>
-                <div class="v100_1046">
-                    <span class="v100_1047">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v100_1048">
-                <div class="v100_1049"></div>
-                <div class="v100_1050">
-                    <span class="v100_1051">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v100_1052">
-                <div class="v100_1053"></div>
-                <span class="v100_1054">고수의 꿀팁</span>
-            </div>
-            <div class="v100_1055">
-                <div class="v100_1056"></div>
-                <span class="v100_1057">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v100_1058">
-                <div class="v100_1059"></div>
-                <span class="v100_1060">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {% block content%}
         <div class="v100_1061"></div>
         <div class="v100_1062">
             <span class="v100_1063">짐정보 입력</span>
@@ -56,7 +33,7 @@
                     <div class="v100_1072"></div>
                 </div>
             </div>
-            <span class="v100_1073">다음</span>
+            <span class="v100_1073"><a href="{% url 'etc' %}">다음</a></span>
         </div>
         <!-- <div class="name"></div> -->
         <div class="v100_1075"></div>
@@ -85,3 +62,4 @@
     </div>
 </body>
 </html>
+{%endblock%}

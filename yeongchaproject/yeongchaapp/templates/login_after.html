@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +17,8 @@
         <div class="v64_734"></div>
         <div class="v64_309"></div>
         <div class="v64_310"></div>
+        {% endblock%}
+        {%block content%}
         <span class="v64_312">마이페이지</span>
         <div class="v64_313">
             <div class="v64_314">
@@ -101,3 +106,4 @@
     </div>
 </body>
 </html>
+{% endblock %}

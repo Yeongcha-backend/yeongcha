@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,40 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/css/mypage_review.css">
+    <link rel="stylesheet" href="{% static 'css/mypage_review.css'%}">
     <title>YoungCha</title>
 </head>
 <body>
     <div class="v121_732">
         <div class="v121_733"></div>
         <div class="v121_734"></div>
-        <span class="v121_737">마이페이지</span>
-        <div class="v121_738">
-            <div class="v121_739">
-                <div class="v121_740"></div>
-                <div class="v121_741">
-                    <span class="v121_742">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v121_743">
-                <div class="v121_744"></div>
-                <div class="v121_745">
-                    <span class="v121_746">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v121_747">
-                <div class="v121_748"></div>
-                <span class="v121_749">고수의 꿀팁</span>
-            </div>
-            <div class="v121_750">
-                <div class="v121_751"></div>
-                <span class="v121_752">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v121_753">
-                <div class="v121_754"></div>
-                <span class="v121_755">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {%block content%}
         <div class="v121_756"></div>
         <div class="v121_757">
             <span class="v121_758">리뷰작성</span>
@@ -68,7 +46,7 @@
                     <div class="v121_821"></div>
                 </div>
             </div>
-            <a href="{% url 'worker_review' %}"><span class="v121_822">등록</span></a>
+            <span class="v121_822">등록</span>
         </div>
         <span class="v121_824">이진성 기사님</span>
         <div class="v121_825"></div>
@@ -79,3 +57,4 @@
     </div>
 </body>
 </html>
+{%endblock%}

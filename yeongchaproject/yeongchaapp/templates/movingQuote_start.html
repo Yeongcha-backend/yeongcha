@@ -1,3 +1,6 @@
+{% extends 'head.html' %}
+{%load static %}
+{% block head %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,40 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/movingQuote_start.css">
+    <link rel="stylesheet" href="{% static 'css/movingQuote_start.css' %}">
     <title>YoungCha</title>
 </head>
 <body>
     <div class="v91_27">
-        <div class="v91_29"></div>
-        <div class="v91_30"></div>
-        <div class="v100_30"></div>
-        <span class="v91_32">마이페이지</span>
-        <div class="v91_33">
-            <div class="v91_34">
-                <div class="v91_35"></div>
-                <div class="v91_36">
-                    <span class="v91_37">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v91_38">
-                <div class="v91_39"></div>
-                <div class="v91_40">
-                    <span class="v91_41">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v91_42">
-                <div class="v91_43"></div>
-                <span class="v91_44">고수의 꿀팁</span>
-            </div>
-            <div class="v91_45">
-                <div class="v91_46"></div>
-                <span class="v91_47">초보 이사러의 궁금증</span>
-            </div><div class="v91_48">
-                <div class="v91_49"></div>
-                <span class="v91_50">우리 동네 이야기</span>
-            </div>
-        </div>
+{%endblock%}
+
+{% block content %}
         <div class="v91_51"></div>
         <div class="v91_75">
             <span class="v91_76">출발지 정보</span>
@@ -82,7 +59,7 @@
                     <div class="v91_89"></div>
                 </div>
             </div>
-            <span class="v91_90">다음</span>
+            <span class="v91_90"><a href="{% url 'movingquote_des' %}">다음</a></span>
         </div>
         <div class="v91_119"></div>
         <div class="v100_27"></div>
@@ -129,5 +106,4 @@
         <div class="v100_61"></div>
         <div class="v100_64"></div>
     </div>
-</body>
-</html>
+{% endblock %}

@@ -1,3 +1,6 @@
+{%extends 'head.html'%}
+{% load static%}
+{% block head %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/digital.css">
+    <link rel="stylesheet" href="{% static 'css/digital.css' %}">
     <title>YoungCha</title>
 </head>
 <body>
@@ -13,33 +16,8 @@
         <div class="v100_742"></div>
         <div class="v100_743"></div>
         <div class="v100_744"></div>
-        <span class="v100_746">마이페이지</span>
-        <div class="v100_747">
-            <div class="v100_748">
-                <div class="v100_749"></div>
-                <div class="v100_750">
-                    <span class="v100_751">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v100_752">
-                <div class="v100_753"></div>
-                <div class="v100_754">
-                    <span class="v100_755">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v100_756">
-                <div class="v100_757"></div>
-                <span class="v100_758">고수의 꿀팁</span>
-            </div>
-            <div class="v100_759">
-                <div class="v100_760"></div>
-                <span class="v100_761">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v100_762">
-                <div class="v100_763"></div>
-                <span class="v100_764">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {%block content%}
         <div class="v100_765"></div>
         <div class="v100_766">
             <span class="v100_767">짐정보 입력</span>
@@ -56,7 +34,7 @@
                     <div class="v100_776"></div>
                 </div>
             </div>
-            <span class="v100_777">다음</span>
+            <span class="v100_777"><a href="{% url 'kit' %}">다음</a></span>
         </div>
         <!-- <div class="name"></div> -->
         <div class="v100_779"></div>
@@ -89,3 +67,4 @@
         </div>
 </body>
 </html>
+{% endblock %}

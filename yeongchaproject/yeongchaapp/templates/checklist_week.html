@@ -1,3 +1,6 @@
+{%extends 'head.html' %}
+{%load static%}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,40 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/checklist_week.css">
+    <link rel="stylesheet" href="{%static 'css/checklist_week.css' %}">
     <title>YoungCha</title>
 </head>
 <body>
     <div class="v64_772">
         <div class="v64_774"></div>
         <div class="v64_775"></div>
-        <span class="v64_777">마이페이지</span>
-        <div class="v64_778">
-            <div class="v64_779">
-                <div class="v64_780"></div>
-                <div class="v64_781">
-                    <span class="v64_782">이사 견적 내기</span>
-                </div>
-            </div>
-            <div class="v64_783">
-                <div class="v64_784"></div>
-                <div class="v64_785">
-                    <span class="v64_786">나눔 장터</span>
-                </div>
-            </div>
-            <div class="v64_787">
-                <div class="v64_788"></div>
-                <span class="v64_789">고수의 꿀팁</span>
-            </div>
-            <div class="v64_790">
-                <div class="v64_791"></div>
-                <span class="v64_792">초보 이사러의 궁금증</span>
-            </div>
-            <div class="v64_793">
-                <div class="v64_794"></div>
-                <span class="v64_795">우리 동네 이야기</span>
-            </div>
-        </div>
+        {%endblock%}
+        {%block content%}
         <span class="v64_818">손쉬운 이사 견적</span>
         <div class="v64_842"></div>
         <div class="v64_744"></div>
@@ -87,3 +65,4 @@
     </div>
 </body>
 </html>
+{% endblock %}
