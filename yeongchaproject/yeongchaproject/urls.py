@@ -19,11 +19,11 @@ urlpatterns = [
     path('det/', views.detail, name='detail'),
     path('kit/', views.kit, name='kit'),
     path('etc/', views.etc, name='etc'),
-    path('mypg_mov/', views.mypg_mov, name="mypage_mov"),
+    path('mypg_mov/', views.mypg_mov, name="mypg_mov"),
     path('mypg_post/',views.mypg_post, name='mypg_post'),
     path('check_day/', views.check_day, name='check_day'),
     path('check_dday/', views.check_Dday, name='check_dday'),
-    path('check_week', views.check_week, name='check_week'),
+    path('check_week/', views.check_week, name='check_week'),
 
     path('login/',views.login,name='login'),
     path('main_home/',views.login_after,name='login_after'), #로그인 후 홈화면  

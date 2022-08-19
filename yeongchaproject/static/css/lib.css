@@ -27,7 +27,7 @@
   .v100_674 {
     width: 51px;
     height: 29px;
-    background: url("/img/logo.png");
+    background: url("/static/img/logo.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -609,7 +609,7 @@
   .v100_334 {
     width: 34px;
     height: 59px;
-    background: url("/img/의자.png");
+    background: url("/static/img/의자.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -622,7 +622,7 @@
   .v100_330 {
     width: 58px;
     height: 80px;
-    background: url("/img/책꽂이.png");
+    background: url("/static/img/책꽂이.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -635,7 +635,7 @@
   .v100_328 {
     width: 101px;
     height: 49px;
-    background: url("/img/책상.png");
+    background: url("/static/img/책상.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

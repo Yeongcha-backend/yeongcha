@@ -27,7 +27,7 @@
   .v64_1338 {
     width: 51px;
     height: 29px;
-    background: url("/img/logo.png");
+    background: url("/static/img/logo.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -435,7 +435,7 @@
   .v64_1383 {
     width: 30px;
     height: 50px;
-    background: url("/img/오른쪽 꺽쇠.png");
+    background: url("/static/img/오른쪽 꺽쇠.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -447,7 +447,7 @@
   .v64_1384 {
     width: 30px;
     height: 50px;
-    background: url("/img/왼쪽 꺽쇠.png");
+    background: url("/static/img/왼쪽 꺽쇠.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

@@ -27,7 +27,7 @@
   .v100_183 {
     width: 51px;
     height: 29px;
-    background: url("/img/logo.png");
+    background: url("/static/img/logo.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -573,7 +573,7 @@
   .v100_296 {
     width: 58px;
     height: 81px;
-    background: url("/img/옷장.png");
+    background: url("/static/img/옷장.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -694,7 +694,7 @@
   .v100_304 {
     width: 122px;
     height: 58px;
-    background: url("/img/연결장.png");
+    background: url("/static/img/연결장.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -707,7 +707,7 @@
   .v100_297 {
     width: 70px;
     height: 58px;
-    background: url("/img/시스템 행거.png");
+    background: url("/static/img/시스템 행거.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -720,7 +720,7 @@
   .v100_298 {
     width: 73px;
     height: 63px;
-    background: url("/img/행거.png");
+    background: url("/static/img/행거.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -733,7 +733,7 @@
   .v100_299 {
     width: 57px;
     height: 71px;
-    background: url("/img/서랍장.png");
+    background: url("/static/img/서랍장.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -746,7 +746,7 @@
   .v100_300 {
     width: 92px;
     height: 48px;
-    background: url("/img/식탁.png");
+    background: url("/static/img/식탁.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -759,7 +759,7 @@
   .v100_301 {
     width: 68px;
     height: 83px;
-    background: url("/img/화장대.png");
+    background: url("/static/img/화장대.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -772,7 +772,7 @@
   .v100_302 {
     width: 119px;
     height: 50px;
-    background: url("/img/쇼파.png");
+    background: url("/static/img/쇼파.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -785,7 +785,7 @@
   .v100_529 {
     width: 77px;
     height: 56px;
-    background: url("/img/침대.png");
+    background: url("/static/img/침대.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

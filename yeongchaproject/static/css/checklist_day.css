@@ -448,7 +448,7 @@
   .v64_1316 {
     width: 30px;
     height: 50px;
-    background: url("/img/오른쪽 꺽쇠.png");
+    background: url("/static/img/오른쪽 꺽쇠.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -460,7 +460,7 @@
   .v64_1317 {
     width: 30px;
     height: 50px;
-    background: url("/img/왼쪽 꺽쇠.png");
+    background: url("/static/img/왼쪽 꺽쇠.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
