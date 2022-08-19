@@ -1,109 +1,335 @@
-{% extends 'head.html' %}
-{%load static %}
-{% block head %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
+{% extends 'base.html' %}
+{% load static %}
+{%block head%}
     <link rel="stylesheet" href="{% static 'css/movingQuote_start.css' %}">
     <title>YoungCha</title>
-</head>
-<body>
-    <div class="v91_27">
-{%endblock%}
 
-{% block content %}
-        <div class="v91_51"></div>
-        <div class="v91_75">
-            <span class="v91_76">출발지 정보</span>
-        </div>
-        <div class="v100_25">
-            <span class="v100_26">주소 설정</span>
-        </div>
-        <div class="v100_28">
-            <span class="v100_29">상세주소</span>
-        </div>
-        <div class="v100_31">
-            <span class="v100_32">집형태</span>
-        </div>
-        <div class="v100_62">
-            <span class="v100_63">방구조</span>
-        </div>
-        <div class="v100_65">
-            <span class="v100_66">층</span>
-        </div>
-        <div class="v100_70">
-            <span class="v100_71">엘레베이터 </span>
-        </div>
-        <div class="v100_78">
-            <span class="v100_79">주차</span>
-        </div>
-        <span class="v91_79">이사 예정일</span>
-        <span class="v91_80">출발지 정보</span>
-        <span class="v91_81">도착지 정보</span>
-        <span class="v91_82">짐 정보 입력</span>
-        <span class="v91_83">요청 사항</span>
-        <span class="v102_1616">최종 리뷰</span>
-        <div class="v91_84">
-            <span class="v91_85">다음</span>
-        </div>
-        <div class="v95_3">
-            <span class="v95_4">다음</span>
-        </div>
-        <div class="v91_86">
-            <div class="v91_87">
-                <div class="v91_88">
-                    <div class="v91_89"></div>
-                </div>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+          }
+          
+          .logo{
+            width: 55px;
+            height: 31px;
+            margin-top: 27px;
+            margin-left: 320px;
+          }
+          
+          .side1{
+            font-size: 12px;
+            margin-left: 588px;
+          }
+          
+          .side2{
+            font-size: 12px;
+            margin-left: 25px;
+          }
+          
+          .search-btn{
+            width: 15px;
+            height: 15px;
+            margin-top: 8px;
+            margin-left: -24px;
+          }
+          
+          .nav-container{
+            display: flex;
+            list-style: none;
+            margin-left: 232px;
+            margin-top: 25px;
+            padding-right: 15px;
+            font-weight: 400;
+          }
+          
+          .nav-item{
+            font-size: 15px;
+            font-style: normal;
+            margin-left: 20px;
+            font-weight: 400;
+            font-style: normal;
+            border-right: 2px solid rgba(143, 177, 176, 1);
+            padding-right: 35px;
+            padding-left: 25px;
+          
+          }
+          
+          .nav-item2{
+            font-size: 15px;
+            font-style: normal;
+            margin-left: 20px;
+            font-weight: 400;
+            font-style: normal;
+            border: none;
+            padding-right: 35px;
+            padding-left: 22px;
+          
+          }
+          
+          a{
+            text-decoration: none;
+            color: black;
+          }
+          
+          a:hover{
+            color: rgba(146, 181, 180, 1);
+          }
+          
+          h1{
+            font-size: 36px;
+            font-weight: 700;
+            color: rgba(77, 118, 123, 1);
+            margin-left: 315px;
+            margin-top: 43px;
+          }
+          
+          .line{
+            width: 100%;
+            height: 10px;
+            background-color: rgba(201, 218, 217, 1);
+            box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+            margin-top: 37px;
+          }
+          
+          .vertical-container{
+            list-style: none;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            margin-left: 96px;
+            margin-top: 61px;
+            line-height: 60px;
+          }
+          
+          section{
+            display: inline;
+          }
+          
+          .line-vertical{
+            width: 0px;
+            height: 800px;
+            margin-left: 250px;
+            margin-top: -421px;
+            background-color: rgba(201, 218, 217, 0.3);
+            border: 3px solid rgba(201, 218, 217, 0.3);
+          }
+          
+          .movingQuote_start{
+            color: rgba(132, 168, 169, 1);
+            padding-left: 94.6px;
+          }
+          
+          .box-line{
+            width: 250px;
+            height: 56px;
+            background-color: rgba(245, 245, 245, 1);
+            margin-left: -95px;
+            cursor: pointer;
+          }
+          
+          .line-vertical{
+            border-left: 3px solid rgba(201, 218, 217, 0.3);
+          }
+          
+          .txt{
+            font-size: 20px;
+            font-weight: 600;
+            color: #4D767B;
+          }
+          
+          .addr1{
+            margin-left: 315px;
+            margin-top: -725px;
+          }
+          
+          .addr2{
+            margin-left: 315px;
+            margin-top: 20px;
+          }
+          
+          .input{
+            border-radius: 15px;
+            width: 660px;
+            height: 38px;
+            border: 2px solid #4D767B;
+            margin-left: 20px;
+          }
+          
+          .select{
+            margin-left: 315px;
+            margin-top: 20px;
+          }
+          
+          .select1{
+            margin-top: 108px;
+            margin-left: 315px;
+          }
+          
+          .btn{
+            width: 83px;
+            height: 38px;
+            border-radius: 15px;
+            border: 2px solid #92B5B4;
+            background-color: white;
+            margin-left: 42px;
+          }
+          
+          .btn1{
+            width: 83px;
+            height: 38px;
+            border-radius: 15px;
+            border: 2px solid #92B5B4;
+            background-color: white;
+            margin-left: 10px;
+          }
+          
+          .btn2{
+            width: 83px;
+            height: 38px;
+            border-radius: 15px;
+            border: 2px solid #92B5B4;
+            background-color: white;
+            margin-left: 7px;
+          }
+          
+          .btn3{
+            width: 83px;
+            height: 38px;
+            border-radius: 15px;
+            border: 2px solid #92B5B4;
+            background-color: white;
+            margin-left: 63px;
+          }
+          
+          .floor{
+            border-radius: 15px;
+            border: 2px solid #92B5B4;
+            margin-left: 78px;
+            width: 83px;
+            height: 38px;
+            background-color: white;
+          }
+          
+          .next{
+            background-color: #92B5B4;
+            color: white;
+            width: 60px;
+            height: 34px;
+            border-radius: 13px;
+            border: none;
+            /* margin-left: 1038px; */
+            /* margin-top: -1000px; */
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 10px;
+          }
+          
+          .return{
+            background-color: #92B5B4;
+            color: white;
+            width: 60px;
+            height: 34px;
+            border-radius: 13px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+          
+          }
+          
+          .bottom-box{
+            float: left;
+            margin-top: 40px;
+            margin-left: 928px;
+            margin-top: 40px;
+          }
+          
+          footer{
+            width: 100%;
+            height: 47px; 
+            margin-top: 200px;
+            background-color: #C9DAD9;
+            padding-top: 1px;
+          }
+          
+          .clicked{
+            background-color: #92B5B4;
+            color: white;
+            font-weight: 500;
+          }
+    </style>
+{%endblock%}
+<!--시작-->
+{%block content%}
+    <h1>출발지 정보</h1>
+    <div class="line"></div>
+
+    <section>
+        <div class="vertical-container">
+            <li class="date">이사 예정일</li>
+            <div class="box-line">
+                <li class="movingQuote_start">출발지 정보</li>
             </div>
-            <span class="v91_90"><a href="{% url 'movingquote_des' %}">다음</a></span>
+            <li class="movingQuote_des">도착지 정보</li>
+            <li class="info">짐 정보 입력</li>
+            <li class="requests">요청 사항</li>
+            <li class="review">최종 리뷰</li>
         </div>
-        <div class="v91_119"></div>
-        <div class="v100_27"></div>
-        <div class="v100_73"></div>
-        <div class="v100_41"></div>
-        <div class="v100_42"></div>
-        <div class="v100_43"></div>
-        <div class="v100_44"></div>
-        <div class="v100_80"></div>
-        <div class="v100_72"></div>
-        <div class="v100_53"></div>
-        <div class="v100_68"></div>
-        <div class="v100_81"></div>
-        <div class="v100_49"></div>
-        <div class="v100_54"></div>
-        <span class="v100_45">원룸</span>
-        <div class="v100_51"></div>
-        <div class="v100_55"></div>
-        <span class="v100_46">1.5룸</span>
-        <div class="v100_56"></div>
-        <span class="v100_74">있음</span>
-        <span class="v100_47">2룸</span>
-        <span class="v100_48">3룸</span>
-        <span class="v100_75">없음</span>
-        <span class="v100_82">가능</span>
-        <span class="v100_83">불가능</span>
-        <span class="v100_77">층</span>
-        <span class="v100_50">4룸</span>
-        <span class="v100_52">5룸 이상</span>
-        <span class="v91_120">지번, 도로명, 건물 검색</span>
-        <span class="v91_317">상세주소 입력 (동/호수 등)</span>
-        <span class="v100_69">숫자만 입력</span>
-        <div class="v91_121"></div>
-        <span class="v91_123">아래와 같은 조합으로 검색하시면 더욱 정확한 결과가 검색 됩니다.</span>
-        <span class="v100_57">빌라/연립</span>
-        <span class="v100_58">주택</span>
-        <span class="v100_59">오피스텔</span>
-        <span class="v100_60">아파트</span>
-        <span class="v91_124">도로명 + 건물번호 </span>
-        <span class="v91_124_1">예) 보문로 34다길 2, 도봉로 76가길 55</span>
-        <span class="v91_125">지역명(동/리) + 번지 </span>
-        <span class="v91_125_1">예) 돈암동 173-1, 미아동 147</span>
-        <!-- <div class="name"></div> -->
-        <div class="v100_61"></div>
-        <div class="v100_64"></div>
+        <div class="line-vertical"></div>   
+    </section>
+
+    <section class="section-addr">
+        <div class="addr1">
+            <span class="txt">주소 설정</span>
+            <input type="text"  class="input" placeholder="지번, 도로명 주소를 입력해주세요">
+        </div>
+        <div class="addr2">
+            <span class="txt">상세 주소</span>
+            <input type="text" class="input" placeholder="상세 주소 입력(동/호수 입력)">
+        </div>
+    </section>
+
+    <div class="select1">
+        <span class="txt">집형태</span>
+        <button class="btn">빌라/연립</button>
+        ​<button class="btn1">주택</button>
+        <button class="btn1">오피스텔</button>
+        <button class="btn1">아파트</button>
     </div>
-{% endblock %}
+    <div class="select">
+        <span class="txt">방구조</span>
+        <button class="btn">원룸</button>
+        <button class="btn1">1.5룸</button>
+        ​<button class="btn1">2룸</button>
+        <button class="btn1">3룸</button>
+        <button class="btn1">4룸</button>
+        <button class="btn1">5룸</button>
+    </div>
+    <div class="select">
+        <span class="txt">층</span>
+        <input type="text" class="floor" placeholder="숫자만 입력">
+        <span>층</span>
+    </div>
+    <div class="select">
+        <span class="txt">엘리베이터</span>
+        <button class="btn2">있음</button>
+        ​<button class="btn1">없음</button>
+    </div>
+    <div class="select">
+        <span class="txt">주차</span>
+        <button class="btn3">가능</button>
+        ​<button class="btn1">불가능</button>
+    </div>
+
+    <div class="bottom-box">
+        <button class="return" onclick="window.location.href='{% url 'movingday'%}'">이전</button>
+        <button class="next" onclick="window.location.href='{%url 'movingquote_des' %}'">다음</button>
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <script src="{% static 'js/movingQute_start.js' %}"></script>
+</body>
+</html>
+{%endblock%}

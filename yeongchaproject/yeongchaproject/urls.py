@@ -19,6 +19,7 @@ urlpatterns = [
     path('det/', views.detail, name='detail'),
     path('kit/', views.kit, name='kit'),
     path('etc/', views.etc, name='etc'),
+    path('fin_review/',views.fin_review, name="fin_review"),
     path('mypg_mov/', views.mypg_mov, name="mypg_mov"),
     path('mypg_post/',views.mypg_post, name='mypg_post'),
     path('check_day/', views.check_day, name='check_day'),

@@ -1,115 +1,78 @@
-{%extends 'head.html'%}
-{%load static%}
-{% block head%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'css/movingQuote_des.css'%}">
+{% extends 'base.html'%}
+{% load static%}
+{%block head%}
+    <link rel="stylesheet" href="{% static 'css/movingQuote_des.css' %}">
     <title>YoungCha</title>
-</head>
-<body>
-    <body>
-        <div class="v100_84">
-            <div class="v100_85"></div>
-            <div class="v100_86"></div>
-            <div class="v100_87"></div>
-            {%endblock%}
-            {% block content %}
-            <div class="v100_108"></div>
-            <div class="v100_109">
-                <span class="v100_110">도착지 정보</span>
+{%endblock%}
+{%block content%}
+    <h1>도착지 정보</h1>
+    <div class="line"></div>
+
+    <section>
+        <div class="vertical-container">
+            <li class="date">이사 예정일</li>
+            <div class="box-line">
+                <li class="movingQuote_start">출발지 정보</li>
             </div>
-            <div class="v100_111">
-                <span class="v100_112">주소 설정</span>
-            </div>
-            <div class="v100_113">
-                <span class="v100_114">상세주소</span>
-            </div>
-            <div class="v100_115">
-                <span class="v100_116">집형태</span>
-            </div>
-            <div class="v100_117">
-                <span class="v100_118">방구조</span>
-            </div>
-            <div class="v100_119">
-                <span class="v100_120">층</span>
-            </div>
-            <div class="v100_121">
-                <span class="v100_122">엘레베이터 </span>
-            </div>
-            <div class="v100_123">
-                <span class="v100_124">주차</span>
-            </div>
-            <span class="v100_125">이사 예정일</span>
-            <span class="v100_126">출발지 정보</span>
-            <span class="v100_127">도착지 정보</span>
-            <span class="v100_128">짐 정보 입력</span>
-            <span class="v100_129">요청 사항</span>
-            <div class="v100_130">
-                <span class="v100_131">다음</span>
-            </div>
-            <div class="v100_132">
-                <span class="v100_133">다음</span>
-            </div>
-            <div class="v100_134">
-                <div class="v100_135">
-                    <div class="v100_136">
-                        <div class="v100_137"></div>
-                    </div>
-                </div>
-                <span class="v100_138"><a href="{% url 'living' %}">다음</a></span>
-            </div>
-            <div class="v100_139"></div>
-            <div class="v100_140"></div>
-            <div class="v100_141"></div>
-            <div class="v100_142"></div>
-            <div class="v100_143"></div>
-            <div class="v100_144"></div>
-            <div class="v100_145"></div>
-            <div class="v100_146"></div>
-            <div class="v100_147"></div>
-            <div class="v100_148"></div>
-            <div class="v100_149"></div>
-            <div class="v100_150"></div>
-            <div class="v100_151"></div>
-            <div class="v100_152"></div>
-            <div class="v100_153"></div>
-            <span class="v100_154">있음</span>
-            <div class="v100_155"></div>
-            <span class="v100_156">없음</span>
-            <span class="v100_157">원룸</span>
-            <div class="v100_158"></div>
-            <span class="v100_159">가능</span>
-            <span class="v100_160">1.5룸</span>
-            <span class="v100_161">불가능</span>
-            <span class="v100_162">층</span>
-            <span class="v100_163">2룸</span>
-            <span class="v100_164">3룸</span>
-            <span class="v100_165">지번, 도로명, 건물 검색</span>
-            <span class="v100_166">상세주소 입력 (동/호수 등)</span>
-            <span class="v100_167">숫자만 입력</span>
-            <div class="v100_168"></div>
-            <span class="v100_169">아래와 같은 조합으로 검색하시면 더욱 정확한 결과가 검색 됩니다.</span>
-            <span class="v100_170">빌라/연립</span>
-            <span class="v100_171">주택</span>
-            <span class="v100_172">오피스텔</span>
-            <span class="v100_173">아파트</span>
-            <span class="v100_174">4룸</span>
-            <span class="v100_175">5룸 이상</span>
-            <span class="v100_176">도로명 + 건물번호</span>
-            <span class="v100_176_1">예) 보문로 34다길 2, 도봉로 76가길 55</span>
-            <span class="v100_177">지역명(동/리) + 번지</span>
-            <span class="v100_177_1">예) 돈암동 173-1, 미아동 147</span>
-            <!-- <div class="name"></div> -->
-            <div class="v100_179"></div>
-            <div class="v100_180"></div>
-            <span class="v102_1617">최종 리뷰</span>
+            <li class="movingQuote_des">도착지 정보</li>
+            <li class="info">짐 정보 입력</li>
+            <li class="requests">요청 사항</li>
+            <li class="review">최종 리뷰</li>
         </div>
-    </body>
+        <div class="line-vertical"></div>   
+    </section>
+
+    <section class="section-addr">
+        <div class="addr1">
+            <span class="txt">주소 설정</span>
+            <input type="text"  class="input" placeholder="지번, 도로명 주소를 입력해주세요">
+        </div>
+        <div class="addr2">
+            <span class="txt">상세 주소</span>
+            <input type="text" class="input" placeholder="상세 주소 입력(동/호수 입력)">
+        </div>
+    </section>
+
+    <div class="select1">
+        <span class="txt">집형태</span>
+        <button class="btn">빌라/연립</button>
+        ​<button class="btn1">주택</button>
+        <button class="btn1">오피스텔</button>
+        <button class="btn1">아파트</button>
+    </div>
+    <div class="select">
+        <span class="txt">방구조</span>
+        <button class="btn">원룸</button>
+        <button class="btn1">1.5룸</button>
+        ​<button class="btn1">2룸</button>
+        <button class="btn1">3룸</button>
+        <button class="btn1">4룸</button>
+        <button class="btn1">5룸</button>
+    </div>
+    <div class="select">
+        <span class="txt">층</span>
+        <input type="text" class="floor" placeholder="숫자만 입력">
+        <span>층</span>
+    </div>
+    <div class="select">
+        <span class="txt">엘리베이터</span>
+        <button class="btn2">있음</button>
+        ​<button class="btn1">없음</button>
+    </div>
+    <div class="select">
+        <span class="txt">주차</span>
+        <button class="btn3">가능</button>
+        ​<button class="btn1">불가능</button>
+    </div>
+
+    <div class="bottom-box">
+        <button class="return" onclick="window.location.href='{% url 'movingquote_start' %}'">이전</button>
+        <button class="next" onclick="window.location.href='{% url 'living' %}'">다음</button>
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <script src="{% static 'js/movingQute_start.js/' %}"></script>
 </body>
 </html>
-{% endblock %}
+{%endblock%}

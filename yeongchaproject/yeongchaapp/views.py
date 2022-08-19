@@ -194,4 +194,7 @@ def check_week(request):
     
 def etc(request):
     return render(request, 'etc.html')
+
+def fin_review(request):
+    return render(request, 'final_review_fin')
     
