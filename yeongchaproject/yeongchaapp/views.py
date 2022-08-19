@@ -152,12 +152,6 @@ def home(request):
 def movingday(request):
     return render(request, 'movingDay.html')
 
-def tip(request):
-    return render(request, 'tip.html')
-
-def question(request):
-    return render(request, 'question.html')
-
 def divide(request):
     return render(request, 'divide.html')
 

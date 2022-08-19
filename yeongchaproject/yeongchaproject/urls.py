@@ -9,9 +9,7 @@ urlpatterns = [
     path('', views.home, name='home'),
 
     path('movingday/', views.movingday, name='movingday'),
-    path('tip/', views.tip, name='tip'),
     path('divide/',views.divide, name='divide'),
-    path('question/', views.question, name='question'),
     path('movquote_strt/', views.movingquote_start, name='movingquote_start'),
     path('movquote_des/', views.movingquote_des, name='movingquote_des'),
     path('living/', views.living, name="living"),
