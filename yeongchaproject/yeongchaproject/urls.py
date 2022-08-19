@@ -19,12 +19,12 @@ urlpatterns = [
     path('det/', views.detail, name='detail'),
     path('kit/', views.kit, name='kit'),
     path('etc/', views.etc, name='etc'),
-    path('fin_review/',views.fin_review, name="fin_review"),
     path('mypg_mov/', views.mypg_mov, name="mypg_mov"),
     path('mypg_post/',views.mypg_post, name='mypg_post'),
     path('check_day/', views.check_day, name='check_day'),
     path('check_dday/', views.check_Dday, name='check_dday'),
     path('check_week/', views.check_week, name='check_week'),
+
 
     path('login/',views.login,name='login'),
     path('main_home/',views.login_after,name='login_after'), #로그인 후 홈화면  
@@ -46,5 +46,8 @@ urlpatterns = [
     path('sharecreate/', views.sharecreate, name='sharecreate'),
     path('sharedetail/<int:share_id>', views.sharedetail, name='sharedetail'),
     path('sharecreate_comment/<int:share_id>', views.sharecreate_comment, name='sharecreate_comment'),
+    #이사견적 데이터 관련
+    path('currentdata/', views.movingdata, name="movingdata"),
+    
 ] #media 파일 접급할 수 있는 url 추가
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

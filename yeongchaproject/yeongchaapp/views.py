@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Question, Tip, Share
+from .models import Question, Start, Tip, Share
 from django.utils import timezone
 from .forms import QuestionModelForm, QuestionCommentForm, TipModelForm,  ShareModelForm, ShareCommentForm
 from django.contrib.auth.models import User
@@ -195,6 +195,17 @@ def check_week(request):
 def etc(request):
     return render(request, 'etc.html')
 
-def fin_review(request):
-    return render(request, 'final_review_fin')
+
+
+#이사견적 데이터
+def movingdata(request):
+    if request.method == 'POST':
+        form=Start(request.POST)
+        if form.is_vaild():
+            post=form.save(commit=False)
+            post.save()
+            return render(request, 'final_review_fin.html')
+        else:
+            return render(request, 'final_review_fin.html')
+    return render()
     

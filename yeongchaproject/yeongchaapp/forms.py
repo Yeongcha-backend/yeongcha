@@ -1,5 +1,5 @@
 from django import forms
-from .models import Question,QuestionComment,Tip,Share,ShareComment
+from .models import Question,QuestionComment,Tip,Share,ShareComment, Start
 
 class QuestionModelForm(forms.ModelForm):
     class Meta:
@@ -100,3 +100,8 @@ class ShareCommentForm(forms.ModelForm):
                 }
             )
         }
+
+class Start(forms.ModelForm):
+    class Meta:
+        model = Start
+        fields=['first', 'second']

@@ -67,7 +67,10 @@
 
     <div class="bottom-box">
         <button class="return" onclick="window.location.href='{% url 'movingquote_start' %}'">이전</button>
-        <button class="next" onclick="window.location.href='{% url 'living' %}'">다음</button>
+        <form method="post">
+        {% csrf_token %}
+        <button class="next" onclick="window.location.href='{% url 'movingdata' %}'">다음</button>
+        </form>
     </div>
     <footer class="footer">
 
