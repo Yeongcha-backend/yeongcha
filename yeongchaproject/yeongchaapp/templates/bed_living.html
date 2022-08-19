@@ -1,92 +1,78 @@
-
-{% load static%}
+{%extends 'head.html'%}
+{% load static %}
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/bed_living.css'%}">
     <title>YoungCha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/tip.css' %}">
-
 </head>
 
 <body>
-    <header>
-        <nav class>
-            <a href="{% url 'home'%}">
-                <img src="{% static 'img/logo.png' %}" class="logo">
-            </a>
-            <a href="{%url 'home'%}" class="side1">로그아웃</a>
-            <a href="{%url 'mypage_mov'%}" class="side2">마이페이지</a>
-            <ul class="nav-container">
-                <li class="nav-item"><a href="{%url 'movingday'%}">이사 견적 내기</a></li>
-                <li class="nav-item"><a href="{%url 'share' %}">나눔 장터</a></li>
-                <li class="nav-item"><a href="{%url 'tip'%}">고수의 꿀팁</a></li>
-                <li class="nav-item"><a href="{%url 'question' %}">초보 이사러의 궁금증</a></li>
-                <li class="nav-item2"><a href="">우리 동네 이야기</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1>고수의 꿀팁</h1>
-    <div class="sub-container">
-        <p class="black">내 주변에 &nbsp;</p>
-        <p class="green">고수 &nbsp;</p>
-        <p class="black">들이 이렇게나 많아?</p>
-        <button class="relevant">최신순</button>
+    <div class="v100_181">
+        <div class="v100_182"></div>
+        <div class="v100_183"></div>
+        <div class="v100_184"></div>
+        {%endblock%}
+        {%block content%}
+        <div class="v100_205"></div>
+        <div class="v100_206">
+                <span class="v100_207">짐 정보 입력</span>
+            </div>
+            <span class="v100_222">이사 예정일</span>
+            <span class="v100_223">출발지 정보</span>
+            <span class="v100_224">도착지 정보</span>
+            <span class="v100_225">짐 정보 입력</span>
+            <span class="v100_226">요청 사항</span>
+            <span class="v102_1618">최종 리뷰</span>
+            <div class="v100_231">
+                <div class="v100_232">
+                    <div class="v100_233">
+                        <div class="v100_234"></div>
+                    </div>
+                </div>
+                <span class="v100_235"><a href="{% url 'lib' %}">다음</a></span>
+            </div>
+        </div>
+        <!-- <div class="name"></div> -->
+        <div class="v100_276"></div>
+        <div class="v100_277"></div>
+        <div class="v100_499"></div>
+        <div class="v100_500"></div>
+        <div class="v100_501"></div>
+        <div class="v100_502"></div>
+        <div class="v100_503"></div>
+        <span class="v100_504">침실/거실 가구</span>
+        <span class="v100_506">서재 가구</span>
+        <span class="v100_507">디지털/생활 가전</span>
+        <span class="v100_508">주방 가전</span>
+        <span class="v100_509">기타</span>
+        <span class="v100_521">해당 짐이 있다면 클릭해주세요. 클릭시 진하게 표시되며 선택됩니다.</span>
+        <div class="v100_296"></div>
+        <span class="v100_284">옷장 - 단품</span>
+        <span class="v100_530">침대</span>
+        <span class="v100_524">행거</span>
+        <span class="v100_528">쇼파</span>
+        <span class="v100_525">서랍장</span>
+        <span class="v100_526">식탁/테이블</span>
+        <span class="v100_527">화장대</span>
+        <span class="v100_522">옷장 - 연결장</span>
+        <span class="v100_523">시스템 행거</span>
+        <div class="v100_304"></div>
+        <div class="v100_297"></div>
+        <div class="v100_298"></div>
+        <div class="v100_299"></div>
+        <div class="v100_300"></div>
+        <div class="v100_301"></div>
+        <div class="v100_302"></div>
+        <div class="v100_529"></div>
+        <span class="v100_1102">해당 짐에 아이콘이 없을 경우, 기타 란에서 직접 입력해주세요.</span>
+        <span class="v298_4">로그아웃</span>
     </div>
-    <div class="search-box">
-        <input type="text" class="search">
-        <input type="image" class="search-btn" value="submit" src="../img/search.png">
-    </div>
-    <button onclick="window.location.href='tipwrite.html'" class="write">글쓰기</button>
-    <div class="wrapper" onclick="window.location.href='tip_content1.html'">
-        <p class="title">이삿짐 스스로 포장할 때 꿀팁:)</p>
-        <p class="date">2022.06.11</p>
-        <p class="count">조회 21</p>
-        <img src="../img/heart.png" class="heart"><b class="views">20</b>
-        <img src="../img/bookmark.png" class="bookmark"><b class="views">6</b>
-    </div>
-    <div class="wrapper">
-        <p class="title">주말 이사시 전입신고 하는 방법!</p>
-        <p class="date">2022.06.11</p>
-        <p class="count">조회 18</p>
-        <img src="../img/heart.png" class="heart"><b class="views">35</b>
-        <img src="../img/bookmark.png" class="bookmark"><b class="views">58</b>
-    </div>
-    <div class="wrapper">
-        <p class="title">각종 관리비 관련 정산 및 전출 예약법</p>
-        <p class="date">2022.06.11</p>
-        <p class="count">조회 16</p>
-        <img src="../img/heart.png" class="heart"><b class="views">20</b>
-        <img src="../img/bookmark.png" class="bookmark"><b class="views">27</b>
-    </div>
-    <div class="wrapper">
-        <p class="title">페 가전제품 무료로 수거할 수 있는 꿀팁!!</p>
-        <p class="date">2022.06.10</p>
-        <p class="count">조회 30</p>
-        <img src="../img/heart.png" class="heart"><b class="views">14</b>
-        <img src="../img/bookmark.png" class="bookmark"><b class="views">12</b>
-    </div>
-    <div class="wrapper">
-        <p class="title">이사 업체 선정은 이렇게!</p>
-        <p class="date">2022.06.10</p>
-        <p class="count">조회 20</p>
-        <img src="../img/heart.png" class="heart"><b class="views">12</b>
-        <img src="../img/bookmark.png" class="bookmark"><b class="views">06</b>
-    </div>
-    <img src="../img/left.png" class="left">
-    <img src="../img/gcircle.png" class="gcircle">
-    <img src="../img/circle.png" class="circle">
-    <img src="../img/circle.png" class="circle">
-    <img src="../img/circle.png" class="circle">
-    <img src="../img/circle.png" class="circle">
-    <img src="../img/right.png" class="right">
-    <script src="../js/like.js"></script>
-
-    <footer class="footer">
-
-    </footer>
 </body>
 </html>
+{%endblock%}
